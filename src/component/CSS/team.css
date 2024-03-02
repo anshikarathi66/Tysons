@@ -1,0 +1,71 @@
+/* team.css */
+
+.card-slider-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px; /* Added padding on both sides */
+    text-align: center;
+    background-color: #fff;
+    width: 30%; /* Adjusted width for a smaller card */
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-image {
+    width: 100%;
+    max-width: 100px; /* Adjusted max-width for a smaller image */
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto 10px; /* Adjusted margin */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-details {
+    color: #333;
+  }
+  
+  .member-name {
+    font-size: 1.2em; /* Adjusted font size */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #007bff;
+  }
+  
+  .member-role {
+    font-size: 1em; /* Adjusted font size */
+    color: #555;
+  }
+  
+  .description {
+    font-style: italic;
+    margin: 10px 0; /* Adjusted margin */
+  }
+  
+  .social-links {
+    margin-top: 10px; /* Adjusted margin */
+  }
+  
+  .social-links a {
+    margin-right: 8px; /* Adjusted margin */
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .social-links a:hover {
+    color: #0056b3;
+  }
+  

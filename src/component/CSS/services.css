@@ -1,0 +1,108 @@
+.what {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.caption {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.services-container {
+    margin: 0 auto;
+    padding: 8%;
+    /* Add padding from both sides */
+}
+
+.services-header {
+    text-align: center;
+    padding: 20px 0;
+    /* Add padding above and below the header */
+    /* Light gray background */
+    color: #343a40;
+    /* Dark gray text */
+    border-radius: 12px;
+    font-size: 28px;
+}
+
+.services-row{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.service-box {
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease; /* Add transition for smoother animation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #8bf6a8, #6ad2f3); /* Light green to light blue gradient background on hover */
+}
+
+.service-box:hover .service-content,
+.service-box:hover h4,
+.service-box:hover p,
+.service-box:hover .bi {
+    color: #fff;
+}
+.service-content {
+    padding: 20px;
+}
+
+.bi {
+    font-size: 24px;
+    color: #343a40;
+    /* Dark gray icon color */
+}
+
+/* Main Heading styling */
+.service-h4{
+    margin: 0 0 15px;
+    color: #343a40;
+    font-size: 22px;
+}
+
+/* Paragraph styling */
+.service-caption {
+    margin: 0;
+    color: #666;
+}
+
+.service-image{
+    max-width: 50px; /* Set a smaller max-width for the images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center images */
+    border-radius: 8px; /* Add border-radius to images */
+    text-align: left; /* Left-align the image */
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 768px) {
+    .services-container {
+        padding: 0 10px;
+        /* Reduce padding on smaller screens */
+    }
+
+    .service-box {
+        margin-bottom: 15px;
+    }
+
+    .service-content {
+        padding: 15px;
+    }
+
+    .service-image{
+        max-width: 40px; /* Make images smaller on small screens */
+    }
+}
