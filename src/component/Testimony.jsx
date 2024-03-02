@@ -37,6 +37,7 @@ const Testimony = () => {
 
   return (
     <div className="testimonial-container">
+      <h2>Testimonials</h2>
       <div className="progress-bar" />
       <div className="fa fa-quote-right fa-quote" />
       <div className="fa fa-quote-left fa-quote" />
