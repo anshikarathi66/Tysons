@@ -1,62 +1,56 @@
-import React from 'react'
-import testimony from "./CSS/testimony.css"
+import React, { useState, useEffect } from 'react';
+import './CSS/testimony.css';
 
-function Testimony() {
+const Testimony = () => {
+  const [idx, setIdx] = useState(0);
+
+  const testimonials = [
+    {
+      name: 'Miyah Myles',
+      position: 'Marketing',
+      photo:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6',
+      text:
+        "I've worked with literally hundreds of HTML/CSS developers and I have to say the top spot goes to this guy. This guy is an amazing developer. He stresses on good, clean code and pays heed to the details. I love developers who respect each and every aspect of a thoroughly thought out design and do their best to put it in code. He goes over and beyond and transforms ART into PIXELS - without a glitch, every time.",
+    },
+    {
+      name: 'June Cha',
+      position: 'Software Engineer',
+      photo: 'https://randomuser.me/api/portraits/women/44.jpg',
+      text:
+        'This guy is an amazing frontend developer that delivered the task exactly how we need it, do yourself a favor and hire him, you will not be disappointed by the work delivered. He will go the extra mile to make sure that you are happy with your project. I will surely work again with him!',
+    },
+    // ... (add more testimonials as needed)
+  ];
+
+  const updateTestimonial = () => {
+    setIdx((prevIdx) => (prevIdx + 1) % testimonials.length);
+  };
+
+  useEffect(() => {
+    const intervalId = setInterval(updateTestimonial, 10000);
+
+    return () => clearInterval(intervalId); // Cleanup on component unmount
+  }, [idx]);
+
+  const { name, position, photo, text } = testimonials[idx];
+
   return (
-    <section id="testimonials">
-  <div
-    id="carouselExampleControls"
-    className="carousel slide"
-    data-bs-ride="false"
-  >
-    <div className="carousel-inner">
-      <div className="carousel-item active">
-        <h2 className="testimonial-text">
-          I no longer have to sniff other dogs for love. I've found the hottest
-          Corgi on TinDog. Woof.
-        </h2>
-        <img
-          className="testimonial-img"
-          src="https://picsum.photos/100"
-          alt="dog-profile"
-        />
-        <em>Pebbles, New York</em>
+    <div className="testimonial-container">
+      <h2>Testimonials</h2>
+      <div className="progress-bar" />
+      <div className="fa fa-quote-right fa-quote" />
+      <div className="fa fa-quote-left fa-quote" />
+      <p className="testimonial">{text}</p>
+      <div className="user">
+        <img src={photo} alt="user" className="user-image" />
+        <div className="user-details">
+          <h4 className="username">{name}</h4>
+          <p className="role">{position}</p>
+        </div>
       </div>
-      <div className="carousel-item">
-        <h2 className="testimonial-text">
-          My dog used to be so lonely, but with TinDog's help, they've found the
-          love of their life. I think.
-        </h2>
-        <img
-          className="testimonial-img"
-          src="https://picsum.photos/100"
-          alt="lady-profile"
-        />
-        <em>Beverly, Illinois</em>
-      </div>
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev"
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true" />
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleControls"
-        data-bs-slide="next"
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true" />
-        <span className="visually-hidden">Next</span>
-      </button>
     </div>
-  </div>
-</section>
-
   );
-}
+};
 
 export default Testimony;
