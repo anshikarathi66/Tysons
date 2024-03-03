@@ -1,7 +1,7 @@
 .about-section{
 	position:relative;
 	/* padding:120px 0px; */
-  margin-bottom: 7%;
+  margin-bottom: 7% !important;
 }
 
 .about-section .content-column{
