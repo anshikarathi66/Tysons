@@ -1,4 +1,6 @@
 import React from 'react'
+import supremecourt from './images/supreme_court.png';
+import lawbook from './images/law_book.jpeg';
 import heading from  './CSS/heading.css';
 
 function Heading() {
@@ -30,24 +32,24 @@ function Heading() {
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src="https://picsum.photos/5000" className="heading-img d-block w-100" alt="..." />
+      <img src={supremecourt} className="heading-img d-block w-100" alt="..." />
       <div className="heading-carousel-caption carousel-caption d-block">
-        <h5 className="heading-h5">First slide label</h5>
-        <p className="heading-p">Some representative placeholder content for the first slide.</p>
+        <h5 className="heading-h5">TYSONS LEGAL ALLIES</h5>
+        <p className="heading-p">Confederate of Experts</p>
       </div>
     </div>
     <div className="carousel-item">
-      <img src="https://picsum.photos/5000" className="heading-img d-block w-100" alt="..." />
+      <img src={lawbook} className="heading-img d-block w-100" alt="..." />
       <div className="heading-carousel-caption carousel-caption d-block">
-        <h5 className="heading-h5">Second slide label</h5>
-        <p className="heading-p">Some representative placeholder content for the second slide.</p>
+        <h5 className="heading-h5">TYSONS LEGAL ALLIES</h5>
+        <p className="heading-p">Your Legal Journey Starts Here</p>
       </div>
     </div>
     <div className="carousel-item">
-      <img src="https://picsum.photos/5000" className="heading-img d-block w-100" alt="..." />
+      <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" className="heading-img d-block w-100" alt="..." />
       <div className="heading-carousel-caption carousel-caption d-block">
-        <h5 className="heading-h5">Third slide label</h5>
-        <p className="heading-p">Some representative placeholder content for the third slide.</p>
+        <h5 className="heading-h5">TYSONS LEGAL ALLIES</h5>
+        <p className="heading-p">Creating a Supportive Legal Community</p>
       </div>
     </div>
   </div>
