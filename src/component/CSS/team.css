@@ -54,9 +54,9 @@
     background: #fff;
     border: 2px solid #01b0f8;
     margin: 0 5px;
-  } */
+  }
 
-  /* &.slick-active {
+  &.slick-active {
     button {
       background: #01b0f8;
       height: 12px;
@@ -97,8 +97,8 @@
   .gtco-testimonials {
     margin-top: 20px;
   }
-  
-  .social-links a:hover {
-    color: #0056b3;
+
+  .gtco-testimonials .card {
+    margin: 0 10px;
   }
-  
+}
