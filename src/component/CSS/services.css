@@ -51,7 +51,7 @@
 .service-box:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(45deg, #8bf6a8, #6ad2f3); /* Light green to light blue gradient background on hover */
+    background: linear-gradient(45deg, #eba5e0, #b72737); /* Light green to light blue gradient background on hover */
 }
 
 .service-box:hover .service-content,

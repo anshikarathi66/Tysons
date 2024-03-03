@@ -7,7 +7,7 @@ function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.pageYOffset > 50) {
-        setnavbarBg("#F5C6EC");
+        setnavbarBg("#393333");
       } else {
         setnavbarBg("transparent");
       }
