@@ -9,6 +9,8 @@
 }
 
 .services-container {
+    margin-bottom: 7% !important;
+    /* padding-bottom: 5.5%; */
     margin: 0 auto;
     /* padding: 8%; */
     padding-left: 10%;

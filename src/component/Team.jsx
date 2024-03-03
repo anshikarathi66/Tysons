@@ -1,5 +1,4 @@
-import React , { useEffect }from 'react';
-import $ from 'jquery'; // Make sure to include jQuery
+import React ,{useState} from 'react';
 import Slider from 'react-slick';
 import './CSS/team.css';
 import 'slick-carousel/slick/slick.css';
@@ -9,123 +8,101 @@ import 'slick-carousel/slick/slick-theme.css';
 import Swiper from 'swiper';
 
 function Team() {
+  const [centerCardIndex, setCenterCardIndex] = useState(0);
   const teamMembers = [
     {
-      id: 1,
+      imageSrc: 'https://images.unsplash.com/photo-1572561300743-2dd367ed0c9a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=300',
       name: 'Chirag K. Tiwari',
       role: 'Founder & CEO',
-      image: 'https://picsum.photos/200',
-      social: {
-        twitter: '@johndoe',
-        linkedin: '/in/johndoe',
-        github: '/johndoe',
-      },
-      description: 'Experienced leader with a strong background in project management and team collaboration. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      quote: 'Tyson\'s Legal Allies, founded by CHIRAG K TIWARI, simplifies the journey for law aspirants with tailored event solutions. Join us for a seamless path to success in your legal career.',
     },
     {
-      id: 2,
+      imageSrc: 'https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301',
       name: 'Vanshika Saini',
-      role: 'Ambasssador',
-      image: 'https://picsum.photos/200',
-      social: {
-        twitter: '@janesmith',
-        linkedin: '/in/janesmith',
-        github: '/janesmith',
-      },
-      description: 'Passionate developer with expertise in front-end technologies and a creative approach to problem-solving. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      role: 'Ambassador',
+      quote: 'Ambassador Vanshika Saini, a dynamic force at Tyson\'s Legal Allies, passionately champions tailored event solutions for success in the legal realm. Join her for an exceptional legal journey.',
     },
-
     {
-      id: 3,
+      imageSrc: 'https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301',
       name: 'Aryaman Singh',
       role: 'Operational Head',
-      image: 'https://picsum.photos/200',
-      social: {
-        twitter: '@janesmith',
-        linkedin: '/in/janesmith',
-        github: '/janesmith',
-      },
-      description: 'Passionate developer with expertise in front-end technologies and a creative approach to problem-solving. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quote: 'As Operational Head, Aryaman Singh leads Tyson\'s Legal Allies with precision, ensuring flawless execution of tailored legal events. Trust him for operational excellence in our dynamic community.',
     },
-
     {
-      id: 4,
-      name: 'Ritik Shankar',
+      imageSrc: 'https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301',
+      name: 'Rithik Shankar',
       role: 'Operational Head',
-      image: 'https://picsum.photos/200',
-      social: {
-        twitter: '@janesmith',
-        linkedin: '/in/janesmith',
-        github: '/janesmith',
-      },
-      description: 'Passionate developer with expertise in front-end technologies and a creative approach to problem-solving. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quote: 'Operational Head Rithik Shankar ensures flawless execution at Tyson\'s Legal Allies, embodying excellence in leadership and legal event management. ',
     },
-
     {
-      id: 5,
+      imageSrc: 'https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301',
       name: 'Aditya Bachkoti',
       role: 'Project Manager',
-      image: 'https://picsum.photos/200',
-      social: {
-        twitter: '@janesmith',
-        linkedin: '/in/janesmith',
-        github: '/janesmith',
-      },
-      description: 'Passionate developer with expertise in front-end technologies and a creative approach to problem-solving. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quote: 'Aditya Bachkoti, Tyson\'s Legal Allies Project Manager, leads with strategic vision, ensuring successful project implementation for excellence in our dynamic legal community. ',
     },
-
     {
-      id: 6,
+      imageSrc: 'https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301',
       name: 'Anshika Rathi',
       role: 'IT Cell Head',
-      image: 'https://picsum.photos/200',
-      social: {
-        twitter: '@janesmith',
-        linkedin: '/in/janesmith',
-        github: '/janesmith',
-      },
-      description: 'Passionate developer with expertise in front-end technologies and a creative approach to problem-solving. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      quote: 'Anshika Rathi, Tyson\'s Legal Allies IT Cell Head, leads technological innovation for a seamless digital experience, contributing to excellence in our dynamic community.',
     },
+    // ... Add more team members here
   ];
 
-  const cardSliderSettings = {
+
+  // Your slider settings
+
+ 
+  const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    centerMode: true,
+    centerPadding: '0',
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: true,
+        },
+      },
+    ],
+    beforeChange: (current, next) => setCenterCardIndex(next),
   };
 
   return (
-    <div>
-      {/* Card Slider section */}
-      <div className="card-slider-container">
-        <Slider {...cardSliderSettings}>
-          {teamMembers.map((member) => (
-            <div key={member.id} className="card custom-card">
-              <img src={member.image} alt={member.name} className="card-image" />
-              <div className="card-details">
-                <h3 className="member-name">{member.name}</h3>
-                <p className="member-role">{member.role}</p>
-                <p className="description">{member.description}</p>
-                <div className="social-links">
-                  <a href={`https://twitter.com/${member.social.twitter}`} target="_blank" rel="noopener noreferrer">
-                    Twitter
-                  </a>
-                  <a href={`https://linkedin.com${member.social.linkedin}`} target="_blank" rel="noopener noreferrer">
-                    LinkedIn
-                  </a>
-                  <a href={`https://github.com${member.social.github}`} target="_blank" rel="noopener noreferrer">
-                    GitHub
-                  </a>
-                </div>
+    <div className="gtco-testimonials">
+      <h2>Office Bearers</h2>
+      <Slider {...sliderSettings}>
+        {teamMembers.map((member, index) => (
+          <div key={index}>
+            <div
+              className={`card text-center ${centerCardIndex === index ? 'focused' : 'blurred'}`}
+            >
+              <img className="card-img-top" src={member.imageSrc} alt={`Team Member - ${index}`} />
+              <div className="card-body">
+                <h5>
+                  {member.name} <br />
+                  <span> {member.role} </span>
+                </h5>
+                <p className="card-text">{member.quote}</p>
               </div>
             </div>
-          ))}
-        </Slider>
-      </div>
+          </div>
+        ))}
+      </Slider>
     </div>
 
 );

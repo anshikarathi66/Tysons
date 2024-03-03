@@ -1,24 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
-
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  align-items: center;
-  background-color: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-  font-family: "Montserrat", sans-serif;
-  height: 100vh;
-  justify-content: center;
-  margin: 0;
-  overflow: hidden;
-  padding: 10px;
-} */
 
 .testimonial-container {
   background-color: #476ce4;
@@ -27,6 +7,7 @@ body {
   margin: 20px auto;
   max-width: 768px;
   padding: 50px 80px;
+  margin-bottom: 7%;
   position: relative;
 }
 
@@ -97,5 +78,16 @@ body {
 
   .fa-quote {
     display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .testimonial-container {
+    max-width: 1000px; /* Adjust the max-width as needed for larger screens */
+    padding: 50px 100px; /* Adjust the padding for larger screens */
+  }
+
+  .fa-quote {
+    top: 100px; /* Adjust the top position for larger screens */
   }
 }
