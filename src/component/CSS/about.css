@@ -1,7 +1,10 @@
 .about-section{
+  font-family: "Montserrat", sans-serif;
 	position:relative;
 	/* padding:120px 0px; */
-  margin-bottom: 7% !important;
+  /* margin-bottom: 7% !important; */
+  /* width: 100% !important; */
+  padding: 7% ;
 }
 
 .about-section .content-column{
@@ -16,18 +19,21 @@
 }
 
 .about-section .content-column .text{
+  text-align: justify;
 	position:relative;
 	color:#777777;
 	font-size:15px;
 	line-height:1.8em;
 	margin-bottom:40px;
+  /* font-family: "Montserrat", sans-serif; */
 }
 
 .about-section .content-column .email{
 	position:relative;
 	color:#252525;
-	font-weight:700;
+	font-weight:900;
 	margin-bottom:30px;
+  /* font-family: "Montserrat", sans-serif; */
 }
 
 .about-section .image-column{
@@ -78,29 +84,31 @@
 	bottom:28px;
 }
 
-.about-section .image-column .inner-column .image .overlay-box .year-box{
-	position:relative;
-	color:#252525;
-	font-size:24px;
-	font-weight:700;
-	line-height:1.4em;
-	padding-left:125px;
-}
+/* .about-section .image-column .inner-column .image .overlay-box .year-box{
+  position: relative;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4em;
+  padding-left: 150px;
+} */
 
 .about-section .image-column .inner-column .image .overlay-box .year-box .number{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:110px;
-	height:110px;
-	color:#862233;
-	font-size:68px;
-	font-weight:700;
-	line-height:105px;
-	text-align:center;
-	background-color:#ffffff;
-	border:1px solid #000000;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 140px;
+  height: 64px;
+  color: #862233;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  /* font-family: "Montserrat", sans-serif; */
 }
+
 .about-section .btn-style-three:before {
     position: absolute;
     content: '';
@@ -120,14 +128,14 @@
     line-height: 24px;
     color: #252525;
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 900;
     background: none;
     display: inline-block;
     padding: 11px 30px;
     background-color: #ffffff;
     text-transform: capitalize;
     border: 2px solid #862233;
-    font-family: 'Arimo', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 .sec-title2{
 	color:#fff;
@@ -145,6 +153,12 @@
     margin-bottom: 10px;
     display: inline-block;
     text-transform: capitalize;
+    font-family: "Montserrat", sans-serif;
+}
+
+.about-h2{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
 }
 .sec-title .title:before {
     position: absolute;
@@ -173,13 +187,9 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 769px) {
   /* Styles for screens wider than 1200px (adjust as needed) */
-  .about-section {
-    margin-bottom: 10%;
-    /* Add other styles as needed for larger screens */
-  }
-
+  
   .about-section .content-column {
     margin-bottom: 60px; /* Adjust the margin as needed */
   }

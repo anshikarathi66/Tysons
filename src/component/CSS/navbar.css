@@ -1,6 +1,7 @@
 /* Navbar.css */
 
 .navbar {
+  font-family: "Montserrat", sans-serif;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   padding: 15px 0;
   background-color: #fff; /* Set the initial background color */

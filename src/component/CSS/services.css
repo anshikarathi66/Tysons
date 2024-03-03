@@ -1,20 +1,19 @@
 .what {
-    font-weight: bold;
+    color: #862233;
+    font-weight: 700;
     font-size: 1rem;
 }
 
 .caption {
-    font-weight: bold;
+    font-weight: 900;
     font-size: 1.5rem;
 }
 
 .services-container {
-    margin-bottom: 7% !important;
+    font-family: "Montserrat", sans-serif;
     /* padding-bottom: 5.5%; */
+    padding: 0 7% 7%;
     margin: 0 auto;
-    /* padding: 8%; */
-    padding-left: 10%;
-    padding-right: 10%;
     /* Add padding from both sides */
 }
 
@@ -72,6 +71,7 @@
 
 /* Main Heading styling */
 .service-h4{
+    font-weight: 900;
     margin: 0 0 15px;
     color: #343a40;
     font-size: 22px;

@@ -6,8 +6,8 @@ function Footer() {
     <div className="container-fluid footer-container">
       <div className="row footer-row">
         <div className="footer-div col-md-4 mb-4">
-          <h2 className='footer-h2'>Tyson</h2>
-          <p className='footer-p footer-para'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem omnis repellendus ab culpa, magnam, repellat eius amet similique architecto dolores iusto corrupti alias? Possimus similique officiis tempore beatae optio rem.Description about the company</p>
+          <h2 className='footer-h2'>Tysons</h2>
+          <p className='footer-p footer-para'>Tysons – Elevating Legal Excellence. Our commitment to unparalleled solutions, client-centricity, and seamless success defines your legal journey with us. Trust Tysons for a distinguished legal future.</p>
           <div className="social-icons">
             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i className="footer-icon fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i className="footer-icon fab fa-instagram"></i></a>
@@ -16,8 +16,8 @@ function Footer() {
         </div>
         <div className="footer-div col-md-4 mb-4">
           <h2 className='footer-h2'>Quick Contact</h2>
-          <p className='footer-p footer-para'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus totam aut debitis sint placeat ullam ipsam at explicabo suscipit recusandae impedit illo, dolore voluptatem ut, expedita eum eveniet numquam quibusdam.Quick contact info and some description</p>
-          <p className='footer-p footer-para'>Contact Details: example@example.com | (123) 456-7890</p>
+          <p className='footer-p footer-para'>At Tysons, we understand that your questions are at the heart of our commitment. Feel free to reach out to us for swift assistance and the valuable information you seek.</p>
+          <p className='footer-p footer-para'>Contact Details: <br /><br /><i className="footer-icon far fa-envelope"></i> grouptysons@gmail.com <br /><br /><i className="footer-icon fas fa-phone"></i> +91-9451816645</p>
         </div>
         <div className="footer-div col-md-4 mb-4">
           <h2 className='footer-h2'>Our Presence</h2>
@@ -26,7 +26,7 @@ function Footer() {
       </div>
       <div className="row">
         <div className="footer-copy-div col-12 text-center">
-          <p className='footer-copy'> Copyright &copy; 2024 Tyson All Rights Reserved</p>
+          <p className='footer-copy'> Copyright &copy;  2024 Tysons Legal Allies. All rights reserved. Terms & Conditions | Privacy Policy</p>
         </div>
       </div>
     </div>

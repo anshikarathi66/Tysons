@@ -4,7 +4,7 @@
   background-color: #862233;
   color: rgb(175, 169, 169);
   padding-top: 4%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
 }
 
@@ -17,6 +17,7 @@
 }
 
 .footer-h2 {
+  font-weight: 700;
   color: #f5c3cb;
   font-size: 24px;
   margin-bottom: 10px;
@@ -57,15 +58,15 @@
   margin-top: 10px;
 }
 
-.social-icons .footer-icon {
+.footer-icon {
   text-decoration: none;
   color: #f5c3cb;
-  font-size: 12px;
+  font-size: 15px;
   margin-right: 4%;
   transition: color 0.3s ease-in-out;
 }
 
-.social-icons .footer-icon:hover {
+.footer-icon:hover {
   color: #bdaaf3;
 }
 

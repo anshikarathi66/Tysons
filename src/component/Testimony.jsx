@@ -36,8 +36,9 @@ const Testimony = () => {
   const { name, position, photo, text } = testimonials[idx];
 
   return (
+    <div className='testimony-main-div'>
     <div className="container-lg testimonial-container">
-      <h2 className="text-center">Testimonials</h2>
+      <h2 className="testimony-h2 text-center">Testimonials</h2>
       <div className="progress-bar" />
       <div className="fa fa-quote-right fa-quote" />
       <div className="fa fa-quote-left fa-quote" />
@@ -45,10 +46,11 @@ const Testimony = () => {
       <div className="user d-flex align-items-center justify-content-center">
         <img src={photo} alt="user" className="user-image rounded-circle" />
         <div className="user-details ms-3">
-          <h4 className="username">{name}</h4>
+          <h4 className="testimony-h4 username">{name}</h4>
           <p className="role">{position}</p>
         </div>
       </div>
+    </div>
     </div>
   );
 };
