@@ -1,75 +1,75 @@
-import React from 'react'
-import heading from  './CSS/heading.css';
+import React from 'react';
+import supremecourt from './images/supreme_court.png';
+import lawbook from './images/law_book.jpeg';
+import heading from './CSS/heading.css';
 
 function Heading() {
   return (
-    <div id="carouselExampleCaptions" className="carousel slide heading-carousel" data-bs-ride="carousel" data-bs-interval="3000">
-  <div className="carousel-indicators heading-carousel-indicators">
-    <button
-      type="button"
-      data-bs-target="#carouselExampleCaptions"
-      data-bs-slide-to={0}
-      className="active  heading-carousel-indicators-btn"
-      aria-current="true"
-      aria-label="Slide 1"
-    />
-    <button
-      type="button"
-      data-bs-target="#carouselExampleCaptions"
-      data-bs-slide-to={1}
-      aria-label="Slide 2"
-      className='heading-carousel-indicators-btn'
-    />
-    <button
-      type="button"
-      data-bs-target="#carouselExampleCaptions"
-      data-bs-slide-to={2}
-      aria-label="Slide 3"
-      className='heading-carousel-indicators-btn'
-    />
-  </div>
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <img src="https://picsum.photos/5000" className="heading-img d-block w-100" alt="..." />
-      <div className="heading-carousel-caption carousel-caption d-block">
-        <h5 className="heading-h5">First slide label</h5>
-        <p className="heading-p">Some representative placeholder content for the first slide.</p>
+    <div
+      id="carouselExampleCaptions"
+      className="carousel slide heading-carousel"
+      data-bs-ride="carousel"
+      data-bs-interval="3000"
+    >
+      <div className="carousel-indicators heading-carousel-indicators">
+        {[0, 1, 2].map((index) => (
+          <button
+            key={index}
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to={index}
+            className={index === 0 ? 'active heading-carousel-indicators-btn' : 'heading-carousel-indicators-btn'}
+            aria-label={`Slide ${index + 1}`}
+          />
+        ))}
       </div>
-    </div>
-    <div className="carousel-item">
-      <img src="https://picsum.photos/5000" className="heading-img d-block w-100" alt="..." />
-      <div className="heading-carousel-caption carousel-caption d-block">
-        <h5 className="heading-h5">Second slide label</h5>
-        <p className="heading-p">Some representative placeholder content for the second slide.</p>
+
+      <div className="carousel-inner">
+        {[
+          { imgSrc: supremecourt, heading: 'TYSONS LEGAL ALLIES', subHeading: 'Confederate of Experts' },
+          { imgSrc: lawbook, heading: 'TYSONS LEGAL ALLIES', subHeading: 'Your Legal Journey Starts Here' },
+          {
+            imgSrc:
+              'https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            heading: 'TYSONS LEGAL ALLIES',
+            subHeading: 'Creating a Supportive Legal Community',
+          },
+        ].map((item, index) => (
+          <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+            <img
+              src={item.imgSrc}
+              className="heading-img d-block w-100"
+              alt={`Slide ${index + 1}`}
+              loading="lazy"
+            />
+            <div className="heading-carousel-caption carousel-caption d-block">
+              <h5 className="heading-h5">{item.heading}</h5>
+              <p className="heading-p">{item.subHeading}</p>
+            </div>
+          </div>
+        ))}
       </div>
+
+      <button
+        className="carousel-control-prev heading-carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span className="carousel-control-prev-icon" aria-hidden="true" />
+        <span className="visually-hidden">Previous</span>
+      </button>
+
+      <button
+        className="carousel-control-next heading-carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span className="carousel-control-next-icon" aria-hidden="true" />
+        <span className="visually-hidden">Next</span>
+      </button>
     </div>
-    <div className="carousel-item">
-      <img src="https://picsum.photos/5000" className="heading-img d-block w-100" alt="..." />
-      <div className="heading-carousel-caption carousel-caption d-block">
-        <h5 className="heading-h5">Third slide label</h5>
-        <p className="heading-p">Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <button
-    className="carousel-control-prev heading-carousel-control-prev"
-    type="button"
-    data-bs-target="#carouselExampleCaptions"
-    data-bs-slide="prev"
-  >
-    <span className="carousel-control-prev-icon" aria-hidden="true" />
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button
-    className="carousel-control-next heading-carousel-control-next"
-    type="button"
-    data-bs-target="#carouselExampleCaptions"
-    data-bs-slide="next"
-  >
-    <span className="carousel-control-next-icon" aria-hidden="true" />
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
   );
 }
 
