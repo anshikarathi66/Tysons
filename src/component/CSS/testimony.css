@@ -1,27 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
-
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  align-items: center;
-  background-color: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-  font-family: "Montserrat", sans-serif;
-  height: 100vh;
-  justify-content: center;
-  margin: 0;
-  overflow: hidden;
-  padding: 10px;
-} */
 
 .testimonial-container {
-  background-color: #476ce4;
+  font-family: "Montserrat", sans-serif;
+  background: #862233;
   border-radius: 15px;
   color: #fff;
   margin: 20px auto;
@@ -30,6 +11,13 @@ body {
   position: relative;
 }
 
+.testimony-h2{
+  font-weight: 900;
+}
+
+.testimony-h4{
+  font-weight: 650;
+}
 .fa-quote {
   color: rgba(255, 255, 255, 0.3);
   font-size: 28px;
@@ -97,5 +85,20 @@ body {
 
   .fa-quote {
     display: none;
+  }
+}
+
+@media (min-width: 769px) {
+
+  .testimonial-container {
+    max-width: 100%;
+    padding: 50px 100px; 
+  }
+  .testimony-main-div{
+    padding: 0 7% 7%;
+  }
+
+  .fa-quote {
+    top: 100px;
   }
 }
