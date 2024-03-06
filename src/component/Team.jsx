@@ -1,6 +1,7 @@
 import React ,{useState} from 'react';
 import Slider from 'react-slick';
 import './CSS/team.css';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import chirag_tiwari1 from './images/Chirag_Tiwari1.jpg'
