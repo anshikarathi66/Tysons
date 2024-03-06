@@ -1,56 +1,76 @@
 import React from 'react';
-import './CSS/about.css'; // Import your custom CSS file
-import chirag_tiwari from './images/Chirag_Tiwari.jpg';
+import supremecourt from './images/supreme_court.png';
+import lawbook from './images/law_book.jpeg';
+import heading from './CSS/heading.css';
 
-import './CSS/about.css';
-function About() {
-
+function Heading() {
   return (
-    <section className="about-section">
-      <div className="container">
-        <div className="row clearfix">
-          {/* Content Column */}
-          <div className="content-column col-md-6 col-sm-12 col-xs-12">
-            <div className="inner-column">
-              <div className="sec-title">
-                <div className="title">About Us</div>
-                <h2 className='about-h2'>
-                  Welcome To <br /> Tysons Legal Allies
-                </h2>
-              </div>
-              <div className="text">
-                Welcome to Tysons Legal Allies! Beyond a platform, we've created a vibrant community redefining legal education. With engaging events like Moot Courts and Placement Drives, we infuse personality into the legal journey. Join us for a unique, impactful, and enjoyable adventure in the legal realm. Cheers to a legal journey like no other!
-              </div>
-              <div className="email">
-                Founder & CEO of Tysons
-              </div>
-              <a href="about.html" className="theme-btn btn-style-three">
-                Read More
-              </a>
-            </div>
-          </div>
-          {/* Image Column */}
-          <div className="image-column col-md-6 col-sm-12 col-xs-12">
-            <div
-              className="inner-column "
-              data-wow-delay="0ms"
-              data-wow-duration="1500ms"
-            >
-              <div className="image">
-                {/* Lazy load the image */}
-                <img src={chirag_tiwari} alt="" loading="lazy" />
-                <div className="overlay-box">
-                  <div className="year-box">
-                    <span className="number">Chirag K. Tiwari</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div
+      id="carouselExampleCaptions"
+      className="carousel slide heading-carousel"
+      data-bs-ride="carousel"
+      data-bs-interval="3000"
+    >
+      <div className="carousel-indicators heading-carousel-indicators">
+        {[0, 1, 2].map((index) => (
+          <button
+            key={index}
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to={index}
+            className={index === 0 ? 'active heading-carousel-indicators-btn' : 'heading-carousel-indicators-btn'}
+            aria-label={`Slide ${index + 1}`}
+          />
+        ))}
       </div>
-    </section>
+
+      <div className="carousel-inner">
+        {[
+          { imgSrc: supremecourt, heading: 'TYSONS LEGAL ALLIES', subHeading: 'Confederate of Experts' },
+          { imgSrc: lawbook, heading: 'TYSONS LEGAL ALLIES', subHeading: 'Your Legal Journey Starts Here' },
+          {
+            imgSrc:
+              'https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            heading: 'TYSONS LEGAL ALLIES',
+            subHeading: 'Creating a Supportive Legal Community',
+          },
+        ].map((item, index) => (
+          <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+            <img
+              src={item.imgSrc}
+              className="heading-img d-block w-100"
+              alt={`Slide ${index + 1}`}
+              loading="lazy"
+            />
+            <div className="heading-carousel-caption carousel-caption d-block">
+              <h5 className="heading-h5">{item.heading}</h5>
+              <p className="heading-p">{item.subHeading}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <button
+        className="carousel-control-prev heading-carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span className="carousel-control-prev-icon" aria-hidden="true" />
+        <span className="visually-hidden">Previous</span>
+      </button>
+
+      <button
+        className="carousel-control-next heading-carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span className="carousel-control-next-icon" aria-hidden="true" />
+        <span className="visually-hidden">Next</span>
+      </button>
+    </div>
   );
 }
 
-export default About;
+export default Heading;
