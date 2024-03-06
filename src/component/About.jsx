@@ -1,13 +1,15 @@
 import React from 'react';
 import './CSS/about.css'; // Import your custom CSS file
-import chirag_tiwari from './images/Chirag_Tiwari.jpg'
+import chirag_tiwari from './images/Chirag_Tiwari.jpg';
 
+import './CSS/about.css';
 function About() {
+
   return (
     <section className="about-section">
       <div className="container">
         <div className="row clearfix">
-          {/*Content Column*/}
+          {/* Content Column */}
           <div className="content-column col-md-6 col-sm-12 col-xs-12">
             <div className="inner-column">
               <div className="sec-title">
@@ -21,15 +23,13 @@ function About() {
               </div>
               <div className="email">
                 Founder & CEO of Tysons
-                {/* Request Quote:{" "}
-                <span className="theme_color">freequote@gmail.com</span> */}
               </div>
               <a href="about.html" className="theme-btn btn-style-three">
                 Read More
               </a>
             </div>
           </div>
-          {/*Image Column*/}
+          {/* Image Column */}
           <div className="image-column col-md-6 col-sm-12 col-xs-12">
             <div
               className="inner-column "
@@ -37,7 +37,8 @@ function About() {
               data-wow-duration="1500ms"
             >
               <div className="image">
-                <img src={chirag_tiwari} alt="" />
+                {/* Lazy load the image */}
+                <img src={chirag_tiwari} alt="" loading="lazy" />
                 <div className="overlay-box">
                   <div className="year-box">
                     <span className="number">Chirag K. Tiwari</span>
@@ -49,10 +50,7 @@ function About() {
         </div>
       </div>
     </section>
-
   );
 }
 
 export default About;
-
-

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import navbar from  "./CSS/navbar.css";
+import navbar from "./CSS/navbar.css";
+import logo from './images/logo.png'
 
 function Navbar() {
   const [navbarBg, setnavbarBg] = useState("transparent");
@@ -25,14 +26,15 @@ function Navbar() {
       <div className="container">
         <a className="navbar-brand" href="#">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMz_BclBO0MeWrP76kpiIcmzz90mgU2LKYGQ&usqp=CAU"
+            src={logo}
             alt="Bootstrap"
-            width="30"
-            height="24"
+            width="50"
+            height="44"
             className="img-fluid"
+            loading="lazy"
           />
         </a>
-
+        
         <button
           className="navbar-toggler"
           type="button"

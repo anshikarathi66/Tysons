@@ -30,7 +30,7 @@ const Testimony = () => {
   useEffect(() => {
     const intervalId = setInterval(updateTestimonial, 10000);
 
-    return () => clearInterval(intervalId); // Cleanup on component unmount
+    return () => clearInterval(intervalId);
   }, [idx]);
 
   const { name, position, photo, text } = testimonials[idx];

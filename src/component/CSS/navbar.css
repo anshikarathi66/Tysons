@@ -1,10 +1,8 @@
-/* Navbar.css */
-
 .navbar {
   font-family: "Montserrat", sans-serif;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   padding: 15px 0;
-  background-color: #fff; /* Set the initial background color */
+  background-color: #fff; 
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -20,12 +18,12 @@
 }
 
 .navbar-toggler-icon {
-  background-color: #fff; /* Set the color of the toggler icon */
+  background-color: #fff;
 }
 
 .navbar-toggler-icon:focus,
 .navbar-toggler-icon:hover {
-  background-color: #fff; /* Set the color on focus/hover */
+  background-color: #fff; 
 }
 
 .navbar-nav {
@@ -37,13 +35,13 @@
 }
 
 .navbar-nav .nav-link {
-  color: #fff; /* Set the text color */
+  color: #fff;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #862233; /* Set the hover color */
+  color: #862233;
   transform: scale(1.1); /* Optional: Add a scaling effect on hover */
 }
 
@@ -61,4 +59,3 @@
   width: 100%;
 }
 
-/* Add more styles as needed */

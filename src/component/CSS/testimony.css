@@ -8,7 +8,6 @@
   margin: 20px auto;
   max-width: 768px;
   padding: 50px 80px;
-  /* margin-bottom: 7%; */
   position: relative;
 }
 
@@ -92,17 +91,14 @@
 @media (min-width: 769px) {
 
   .testimonial-container {
-    max-width: 100%; /* Adjust the max-width as needed for larger screens */
+    max-width: 100%;
     padding: 50px 100px; 
-    /* padding: 7%; */
-    /* margin-left: 7%;
-    margin-right: 7%; */
   }
   .testimony-main-div{
     padding: 0 7% 7%;
   }
 
   .fa-quote {
-    top: 100px; /* Adjust the top position for larger screens */
+    top: 100px;
   }
 }
