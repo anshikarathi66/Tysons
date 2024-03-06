@@ -1,6 +1,6 @@
-// import React from "react";
 import React, { useState, useEffect } from "react";
-import navbar from  "./CSS/navbar.css";
+import navbar from "./CSS/navbar.css";
+import logo from './images/logo.png'
 
 function Navbar() {
   const [navbarBg, setnavbarBg] = useState("transparent");
@@ -8,33 +8,33 @@ function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.pageYOffset > 50) {
-        setnavbarBg("#F5C6EC");
+        setnavbarBg("#393333");
       } else {
         setnavbarBg("transparent");
       }
     };
+
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
-    // NAVBAR SECTION
-    <nav
-      className="navbar navbar-expand-lg navbar-light fixed-top"
-      style={{ backgroundColor: navbarBg }}
-    >
-      {/* logo */}
+    <nav className="navbar navbar-expand-md navbar-light fixed-top w-100" style={{ backgroundColor: navbarBg }}>
       <div className="container">
         <a className="navbar-brand" href="#">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMz_BclBO0MeWrP76kpiIcmzz90mgU2LKYGQ&usqp=CAU"
+            src={logo}
             alt="Bootstrap"
-            width="30"
-            height="24"
+            width="50"
+            height="44"
+            className="img-fluid"
+            loading="lazy"
           />
         </a>
-
+        
         <button
           className="navbar-toggler"
           type="button"
@@ -48,7 +48,7 @@ function Navbar() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <a className="nav-link" href="#">
                 Home
