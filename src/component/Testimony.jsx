@@ -1,26 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import './CSS/testimony.css';
+import Hariom_Dixit from './images/Hariom_dixit.JPG';
+import Sandeep_Tiwari from './images/Sandeep_Tiwari.JPG';
+import ankita_singh from './images/ankita_singh.jpeg';
 
 const Testimony = () => {
   const [idx, setIdx] = useState(0);
 
   const testimonials = [
     {
-      name: 'Miyah Myles',
-      position: 'Marketing',
+      name: 'Hariom Dixit',
+      position: 'Advocate',
       photo:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6',
+        Hariom_Dixit,
       text:
-        "I've worked with literally hundreds of HTML/CSS developers and I have to say the top spot goes to this guy. This guy is an amazing developer. He stresses on good, clean code and pays heed to the details. I love developers who respect each and every aspect of a thoroughly thought out design and do their best to put it in code. He goes over and beyond and transforms ART into PIXELS - without a glitch, every time.",
-    },
+        "Tysons Legal Allies is not just a platform; it's a revolution in the legal landscape. As an advocate deeply invested in shaping the future of law, I appreciate the tireless efforts of Tysons in creating a vibrant community of legal professionals. Their commitment to guiding law students and providing opportunities for collaboration sets them apart. Tysons Legal Allies is not just a destination for legal services; it's a home for the legal fraternity, fostering growth, mentorship, and a shared passion for justice."},
     {
-      name: 'June Cha',
-      position: 'Software Engineer',
-      photo: 'https://randomuser.me/api/portraits/women/44.jpg',
+      name: 'Sandeep K. Tiwari',
+      position: 'Leading Industrialist',
+      photo: Sandeep_Tiwari,
       text:
-        'This guy is an amazing frontend developer that delivered the task exactly how we need it, do yourself a favor and hire him, you will not be disappointed by the work delivered. He will go the extra mile to make sure that you are happy with your project. I will surely work again with him!',
-    },
-    // ... (add more testimonials as needed)
+        'Tysons Legal Allies has successfully bridged the gap between the legal fraternity and the business world. As a leading industrialist, I have witnessed the impact of their platform in connecting legal experts with industries seeking specialized advice. This initiative not only facilitates smoother business operations but also nurtures a collaborative environment. Tysons Legal Allies is undoubtedly a catalyst in fostering meaningful partnerships between the legal and corporate sectors.'},
+    {
+      name: 'Ankita Singh',
+      position: 'PHD Scholar',
+      photo: ankita_singh,
+      text:
+        'As a PhD scholar immersed in the intricate realms of legal academia, I am immensely impressed by Tysons Legal Allies commitment to empowering law aspirants. Their digital platform provides an invaluable space for knowledge exchange and mentorship. It serves as a beacon for aspiring scholars, guiding them through the complexities of legal research and creating a supportive community. Tysons Legal Allies is a testament to the transformative potential of digital platforms in advancing legal education.'},
+    
   ];
 
   const updateTestimonial = () => {
